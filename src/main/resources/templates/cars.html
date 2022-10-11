@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+
+
+    <div class="carResult">
+    </div>
+
+
+    <script>
+
+
+        const cars = document.querySelector(".carResult")
+
+        
+        async function getAllCars() {
+            let carArray = await fetch('http://localhost:8080/cars')
+            return await carArray.json()
+
+        }
+
+        printCars()
+        async function printCars() {
+            let bilar = await getAllCars()
+            let html = ''
+            for (let c of bilar) {
+                html += `<div class="row">
+                <img src="${c.carName}.png">
+                <div class="carName">${c.carName}</div>
+                <div class="carDescription">${c.description}</div>
+                </div>`
+            }
+
+            cars.innerHTML = html
+
+        }
+
+
+    </script>
+
+<!-- <script src="../static/cars.js"></script> -->
+
+</body>
+
+</html>
