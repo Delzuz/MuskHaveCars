@@ -10,6 +10,7 @@ public class MuskHaveCarsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MuskHaveCarsApplication.class, args);
+
 	}
 
 }
