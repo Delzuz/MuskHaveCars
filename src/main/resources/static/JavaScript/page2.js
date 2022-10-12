@@ -39,7 +39,7 @@
     printCars()
     async function printCars() {
         let bilar = await getAllCars()
-        let html = `<form action="/test">
+        let html = `<form action="/test" method="post">
             <div class="container text-center">
             <div class="row">`
 
@@ -67,7 +67,7 @@
                                 <span class="fw-normal">Normal weight text.</span>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-outline-primary">Primary</button>
+                        <button value="${c.id}" type="submit" class="btn btn-outline-primary" name= "button">Primary</button>
                     </div>`
 
             }
