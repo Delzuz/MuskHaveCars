@@ -20,14 +20,11 @@
     <div class="container-md">
         <!-- div för inre container som håller de olika form fälten  -->
         <div class="container-md">
-            <form class="form-control" id="con">
+            <form class="form-control test" id="con" action="/getSession" method="post">
 
                 <label>Upphämtningsplats</label><br>
-                <select class="form-select form-select-lg   " aria-label=".form-select-lg example">
-                    <option value="Malmö">Malmö</option>
-                    <option value="Stockholm">Stockholm</option>
-                    <option value="Göteborg">Göteborg</option>
-                    <option value="Växsjö">Växsjö</option>
+                <select class="form-select form-select-lg locationsArray " aria-label=".form-select-lg example">
+                    
                 </select><br>
 
 
@@ -36,17 +33,22 @@
                 <label>From date</label>
 
 
-                <input type="date" class="date" id="from" />
+                <input type="date" class="date" id="from" name="from"/>
                 <label>To date</label><br />
-                <input type="date" class="date" id="to" /><br>
+                <input type="date" class="date" id="to" name="to"/><br>
 
 
-                <input type="submit" value="Book!" class="bookButton btn btn-primary btn-lg"/>
+                <input type="submit" value="Book it NOW!" class="bookButton btn btn-primary btn-lg" onclick="clickbutton ()"/>
             </form>
+
+            
         </div>
 
     </div>
 </div>
+
+<script src="/JavaScript/page1.js"></script>
+
 </body>
 
 </html>
