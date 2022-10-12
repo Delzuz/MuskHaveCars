@@ -1,9 +1,8 @@
 package com.example.MuskHaveCars.Classes;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class CarSegment {
@@ -15,6 +14,10 @@ public class CarSegment {
     private Integer price;
     private String description;
 
+    @OneToMany(mappedBy = "carSegment", cascade = CascadeType.ALL)
+    private List<Car> cars = new ArrayList<>();
+
+
     public CarSegment() {
 
     }
@@ -24,6 +27,7 @@ public class CarSegment {
         this.segmentName = segmentName;
         this.price = price;
         this.description = description;
+
     }
 
     public Long getId() {
@@ -58,4 +62,11 @@ public class CarSegment {
         this.description = description;
     }
 
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 }

@@ -1,9 +1,8 @@
 package com.example.MuskHaveCars.Classes;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -18,6 +17,9 @@ public class Customer {
     private String email;
     private String phoneNumber;
 
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Rental> rentals = new ArrayList<>();
+
     public Customer() {
 
     }
@@ -30,6 +32,7 @@ public class Customer {
         this.PNR = PNR;
         this.email = email;
         this.phoneNumber = phoneNumber;
+
     }
 
     public Long getId() {
@@ -86,5 +89,13 @@ public class Customer {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public List<Rental> getRentals() {
+        return rentals;
+    }
+
+    public void setRentals(List<Rental> rentals) {
+        this.rentals = rentals;
     }
 }

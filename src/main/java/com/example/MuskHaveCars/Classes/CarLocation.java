@@ -1,45 +1,40 @@
 package com.example.MuskHaveCars.Classes;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class CarLocation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long carLocationId;
-    private Long carId;
-    private Long locationId;
+    private Long id;
+    //private Long carIdToLocation;
+    //private Long locationId;
     private Integer quantity;
+
+
+    @ManyToOne
+    private Car car;
+
+    @ManyToOne
+    private GeoLocation geoLocation;
 
     public CarLocation () {
 
     }
 
-    public CarLocation(Long carLocationId, Long carId, Long locationId, Integer quantity) {
-        this.carLocationId = carLocationId;
-        this.carId = carId;
-        this.locationId = locationId;
+    public CarLocation(Long id, Integer quantity) {
+        this.id = id;
         this.quantity = quantity;
+
     }
 
-    public Long getCarId() {
-        return carId;
+    public Long getId() {
+        return id;
     }
 
-    public void setCarId(Long carId) {
-        this.carId = carId;
-    }
-
-    public Long getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(Long locationId) {
-        this.locationId = locationId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Integer getQuantity() {
@@ -50,11 +45,19 @@ public class CarLocation {
         this.quantity = quantity;
     }
 
-    public Long getCarLocationId() {
-        return carLocationId;
+    public Car getCar() {
+        return car;
     }
 
-    public void setCarLocationId(Long carLocationId) {
-        this.carLocationId = carLocationId;
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public GeoLocation getGeoLocation() {
+        return geoLocation;
+    }
+
+    public void setGeoLocation(GeoLocation geoLocation) {
+        this.geoLocation = geoLocation;
     }
 }

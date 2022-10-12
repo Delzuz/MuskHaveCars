@@ -1,9 +1,8 @@
 package com.example.MuskHaveCars.Classes;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Car {
@@ -14,18 +13,26 @@ public class Car {
     private String carName;
     private String description;
     private Integer range;
-    private Long segmentId;
+
+    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
+    private List<Rental> rentals = new ArrayList<>();
+
+    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
+    private List<CarLocation> carLocations = new ArrayList<>();
+
+    @ManyToOne
+    private CarSegment carSegment;
 
     public Car() {
 
     }
 
-    public Car(Long id, String carName, String description, Integer range, Long segmentId) {
+    public Car(Long id, String carName, String description, Integer range) {
         this.id = id;
         this.carName = carName;
         this.description = description;
         this.range = range;
-        this.segmentId = segmentId;
+
     }
 
     public Long getId() {
@@ -60,11 +67,27 @@ public class Car {
         this.range = range;
     }
 
-    public Long getSegmentId() {
-        return segmentId;
+    public List<Rental> getRentals() {
+        return rentals;
     }
 
-    public void setSegmentId(Long segmentId) {
-        this.segmentId = segmentId;
+    public void setRentals(List<Rental> rentals) {
+        this.rentals = rentals;
+    }
+
+    public List<CarLocation> getCarLocations() {
+        return carLocations;
+    }
+
+    public void setCarLocations(List<CarLocation> carLocations) {
+        this.carLocations = carLocations;
+    }
+
+    public CarSegment getCarSegment() {
+        return carSegment;
+    }
+
+    public void setCarSegment(CarSegment carSegment) {
+        this.carSegment = carSegment;
     }
 }

@@ -1,6 +1,8 @@
 package com.example.MuskHaveCars.Classes;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "GeoLocation")
@@ -11,6 +13,9 @@ public class GeoLocation {
     private Long id;
     private String cityName;
 
+    @OneToMany(mappedBy = "geoLocation", cascade = CascadeType.ALL)
+    private List<CarLocation> carLocations = new ArrayList<>();
+
     public GeoLocation() {
 
     }
@@ -18,6 +23,7 @@ public class GeoLocation {
     public GeoLocation(Long id, String cityName) {
         this.id = id;
         this.cityName = cityName;
+
     }
 
     public Long getId() {
@@ -34,5 +40,13 @@ public class GeoLocation {
 
     public void setCityName(String cityName) {
         this.cityName = cityName;
+    }
+
+    public List<CarLocation> getCarLocations() {
+        return carLocations;
+    }
+
+    public void setCarLocations(List<CarLocation> carLocations) {
+        this.carLocations = carLocations;
     }
 }
