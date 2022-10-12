@@ -13,6 +13,9 @@ public class SecondController {
         return "page2";
     }
 
-
+    @GetMapping("/page1")
+    public String startPage() {
+        return "page1";
+    }
 
 }

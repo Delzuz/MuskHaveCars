@@ -5,4 +5,7 @@ INSERT INTO CAR (CAR_NAME, DESCRIPTION) VALUES ('renaultzoe', 'The Renault Zoe (
 INSERT INTO CAR (CAR_NAME, DESCRIPTION) VALUES ('teslamodels', 'Model S is built from the ground up as an electric vehicle, with a high-strength architecture and floor-mounted battery pack for incredible occupant protection and low rollover risk.');
 INSERT INTO CAR (CAR_NAME, DESCRIPTION) VALUES ('volvoxc40', 'TestDescription');
 
-
+INSERT INTO GEO_LOCATION (CITY_NAME) VALUES ('Malmö');
+INSERT INTO GEO_LOCATION (CITY_NAME) VALUES ('Stockholm');
+INSERT INTO GEO_LOCATION (CITY_NAME) VALUES ('Göteborg');
+INSERT INTO GEO_LOCATION (CITY_NAME) VALUES ('Växsjö');

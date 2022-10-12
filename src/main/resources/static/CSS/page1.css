@@ -1,0 +1,76 @@
+body {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date {
+  display: inline-block;
+  position: relative;
+
+}
+
+.date::-webkit-calendar-picker-indicator{
+display:block;
+top:0;
+left:0;
+background: #0000;
+position:absolute;
+transform: scale(100);
+margin: 20px 20px;
+}
+
+input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+form {
+  background-color: red;
+  text-align: center;
+}
+
+.bookButton {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+select {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.probably{
+  font-size: 10px;
+
+}
+h1{
+
+
+}
+h2{
+  color: yellow;
+}
