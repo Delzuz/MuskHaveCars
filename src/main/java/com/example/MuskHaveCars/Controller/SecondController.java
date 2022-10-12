@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class SecondController {
 
 
-    @GetMapping("/start")
+    @GetMapping("/page2")
     public String start() {
-        return "cars";
+        return "page2";
     }
 
 
