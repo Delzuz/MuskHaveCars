@@ -3,26 +3,31 @@ package com.example.MuskHaveCars.Classes;
 import java.util.Date;
 
 public class StartInfo {
-    private String location;
+
+    private Integer IDlocation;
     private Date from;
     private Date to;
+
+    private Integer IDcar;
+
+    private Integer IDcustomer;
 
 
     public StartInfo() {
     }
 
-    public StartInfo(String location, Date from, Date to) {
-        this.location = location;
+    public StartInfo(Integer location, Date from, Date to) {
+        this.IDlocation = location;
         this.from = from;
         this.to = to;
     }
 
-    public String getLocation() {
-        return location;
+    public Integer getLocation() {
+        return IDlocation;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLocation(Integer location) {
+        this.IDlocation = location;
     }
 
     public Date getFrom() {
@@ -44,7 +49,7 @@ public class StartInfo {
     @Override
     public String toString() {
         return "StartInfo{" +
-                "location='" + location + '\'' +
+                "location='" + IDlocation + '\'' +
                 ", from=" + from +
                 ", to=" + to +
                 '}';

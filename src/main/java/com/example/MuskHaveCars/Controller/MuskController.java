@@ -36,12 +36,13 @@ public class MuskController {
     }
 
     @PostMapping("/postPage1Data")
-    public String cookieTest(@RequestParam String from, @RequestParam String to, HttpSession session, HttpServletResponse response) throws IOException {
+    public String cookieTest(@RequestParam String location, @RequestParam String from, @RequestParam String to, HttpSession session, HttpServletResponse response) throws IOException {
         StartInfo startInfo = new StartInfo();
         //startInfo.setFrom(); osv
         session.setAttribute("startInfo", startInfo);
         System.out.println(from);
         System.out.println(to);
+        System.out.println(location);
         response.sendRedirect("http://localhost:8080/page2");
 
         return "hej";
