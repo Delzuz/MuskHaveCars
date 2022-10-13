@@ -12,7 +12,7 @@
     printCars()
     async function printCars() {
         let bilar = await getAllCars()
-        let html = `<form action="/test" method="post">
+        let html = `<form action="/postPage2Data" method="post">
             <div class="container text-center">
             <div class="row">`
 

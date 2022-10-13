@@ -1,8 +1,6 @@
 const locations = document.querySelector(".locationsArray")
 
-        function clickbutton () {
-            window.location.href = "http://www.w3schools.com";
-        }
+        
         async function getAllLocations() {
             let locationsArray = await fetch('http://localhost:8080/geoCities')
             return await locationsArray.json()
@@ -24,7 +22,7 @@ const locations = document.querySelector(".locationsArray")
         const form = document.querySelector(".test")
 
         const userAction = async () => {
-            const response = await fetch('http://localhost:8080/getSession', {
+            const response = await fetch('http://localhost:8080/postPage1Data', {
                 method: 'POST',
                 body: form,
                 headers: {
