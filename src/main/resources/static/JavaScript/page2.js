@@ -40,7 +40,7 @@
                                 <span class="fw-normal">Normal weight text.</span>
                             </div>
                         </div>
-                        <button value="${c.id}" type="submit" class="btn btn-outline-primary" name= "button">Primary</button>
+                        <button value="${c.id}" type="submit" class="btn btn-outline-primary" name= "carButton">Primary</button>
                     </div>`
 
             }

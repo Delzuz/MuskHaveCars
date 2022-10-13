@@ -23,8 +23,8 @@ public class Rental {
 
     }
 
-    public Rental(Long id, Date fromDate, Date toDate, Integer totalPrice) {
-        this.id = id;
+    public Rental( Date fromDate, Date toDate, Integer totalPrice) {
+        /*this.id = id;*/
         this.fromDate = fromDate;
         this.toDate = toDate;
         this.totalPrice = totalPrice;
