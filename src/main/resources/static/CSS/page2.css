@@ -1,0 +1,76 @@
+/* body {
+    background-color: black;
+    
+    
+} */
+
+.cars {
+    background-color: lightgray;
+
+}
+
+.navbartest {
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    height : 150px;
+    background-color: black;
+    color : white;
+    
+    
+    
+}
+.navbartest img {
+    height : 150px;
+    width: 200px;
+    
+
+}
+
+#white {
+    color: white;
+}
+
+#orange {
+    color: orangered;
+}
+
+.navbartest .menu-options {
+    display: flex;
+    gap : 30px;
+}
+
+.carText {
+    background-color: white;
+    border: solid 1px;
+    box-shadow: 0px 5px 5px 0px black;
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.img-fluid {
+    background-color: lightgray;
+    border: solid 1px;
+    box-shadow: 0px 5px 5px 0px black;
+    border-radius: 25px;
+    /* height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px; */
+    
+
+}
+
+.testgrab {
+    padding: 10px;
+    margin: 25px;
+
+    
+}
+
+/* .elon { 
+    left: 0;
+    top: -5px;
+
+} */
