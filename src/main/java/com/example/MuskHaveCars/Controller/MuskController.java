@@ -1,9 +1,6 @@
 package com.example.MuskHaveCars.Controller;
 
-import com.example.MuskHaveCars.Classes.Car;
-import com.example.MuskHaveCars.Classes.Customer;
-import com.example.MuskHaveCars.Classes.GeoLocation;
-import com.example.MuskHaveCars.Classes.StartInfo;
+import com.example.MuskHaveCars.Classes.*;
 import com.example.MuskHaveCars.Repository.CarRepository;
 import com.example.MuskHaveCars.Repository.CustomerRepository;
 import com.example.MuskHaveCars.Repository.GeoLocationRepository;
@@ -15,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -78,7 +77,30 @@ public class MuskController {
         System.out.println(finalStartInfo);
 
 
+
+
         /*Car car = (Car) carRepository.findById(1L);*/
+        Long idLocation = Long.valueOf(finalStartInfo.getIDlocation());
+        Long idCar = Long.valueOf(finalStartInfo.getIDcar());
+        LocalDate fromDate = LocalDate.parse(finalStartInfo.getFrom());
+        LocalDate toDate = LocalDate.parse(finalStartInfo.getTo());
+
+
+
+
+
+        GeoLocation geoLocation = geoRepository.findById(idLocation).orElse(null);
+        Car car = carRepository.findById(idCar).orElse(null);
+
+        Rental rental = new Rental(fromDate, toDate, 500);
+
+        rental.setCustomer(nyaKunden);
+        rental.setCar(car);
+
+        System.out.println(rental);
+        rentalRepository.save(rental);
+
+
 
 
 

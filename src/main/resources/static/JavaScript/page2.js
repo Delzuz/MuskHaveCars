@@ -21,7 +21,7 @@
             i++
             if (i <= 3) {
 
-                html += `                    <div class="col">
+                html += `                    <div class="col testgrab">
                         <img src="/Images/${c.id}.png" class="img-fluid" alt="...">
                         <div class="carText">
                             <div class="fw-semibold">Car:
@@ -34,13 +34,13 @@
                                 <span class="fw-normal">${c.range}</span>
                             </div>
                             <div class="fw-semibold">Segment:
-                                <span class="fw-normal">Normal weight text.</span>
+                                <span class="fw-normal">${c.carSegment.segmentName}</span>
                             </div>
                             <div class="fw-semibold">Price:
-                                <span class="fw-normal">Normal weight text.</span>
+                                <span class="fw-normal">${c.carSegment.price} sek</span>
                             </div>
                         </div>
-                        <button value="${c.id}" type="submit" class="btn btn-outline-primary" name= "carButton">Primary</button>
+                        <button value="${c.id}" type="submit" class="btn btn-dark" name= "carButton">Select</button>
                     </div>`
 
             }
