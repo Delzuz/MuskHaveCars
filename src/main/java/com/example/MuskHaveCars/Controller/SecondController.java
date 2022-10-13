@@ -7,15 +7,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class SecondController {
 
+    @GetMapping("/page1")
+    public String startPage() {
+        return "page1";
+    }
 
     @GetMapping("/page2")
     public String start() {
         return "page2";
     }
 
-    @GetMapping("/page1")
-    public String startPage() {
-        return "page1";
+
+    @GetMapping("/page3")
+    public String customerPage() {
+        return "page3";
+    }
+
+    @GetMapping("/page4")
+    public String booking() {
+        return "page4";
     }
 
 }

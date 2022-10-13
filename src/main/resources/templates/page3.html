@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fill in your information</title>
+    <link rel="stylesheet" href="../CSS/page3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+     </head>
+  <body>
+    <nav class="navbar">
+      <img alt="elon musk" src="/Images/customerHeader.png" />
+      <div class="menu-options">
+        <p id="white"> 1. Welcome</p>
+        <p id="white"> 2. Car of choice</p>
+        <p id="white"> 3. Sustainability</p>
+        <p id="orange">✔ 4. Customer information</p>
+        <p id="white"> 5. Booking Confirmation</p>
+      </div>
+      <br>
+    </nav>
+    <div class="main-container">
+      <div class="left">
+        <h1 class="driver-info">Customer information</h1>
+        <div class="note-to-driver">
+          This vechicle is only available on request i.e. according to availablility. 
+          Our office will contact you to confirm if the vechicle is available within 1 working day.
+          Thank you.
+        </div>
+<!--         <div class="login-section">
+          <p>Logga in och spara tid.</p>
+          <button>Login</button>
+        </div> -->
+      </br>
+      <form action="/postPage3Data" method="POST">
+        <label for="titel">Titel</label>
+        <select name="titel" id="titel">
+          <optgroup label="Titel">
+            <option value="Mr">Mr.</option>
+            <option value="Mrs">Mrs.</option>
+            <option value="Mrs">Ms.</option>
+          </optgroup>
+      
+        </select>
+        <div class="fields">
+          <div class="column-container">
+            <div class="field">
+              <label for="FirstName">First Name</label>
+              <input type="text" name="fName" id="FirstName">
+            </div>
+            <div class="field">
+              <label for="LastName">Last Name</label>
+              <input type="text" name="lName" id="lastName">
+            </div>
+          </div>
+          <div class="column-container">
+            <div class="field">
+              <label for="PNR">PNR</label>
+              <input type="text" name="pnr" id="PNR">
+            </div>
+            <div class="field">
+              <label for="Email">Email</label>
+              <input type="text" name="email" id="Email">
+            </div>
+          </div>
+          <div class="field">
+            <label for="Phone">Phone</label>
+            <input type="number" name="pNumber" id="Phone">
+          </div>
+          <div class="column-container">
+            <div class="field">
+              <label for="Address">Address</label>
+              <input type="text" name="address" id="Address">
+            </div>
+            <div class="field">
+              <label for="Zip Code">Zip Code</label>
+              <input type="text" name="zCode" id="Zip Code">
+            </div>
+          </div>
+          <div class="column-container">
+            <div class="field">
+              <label for="City">City</label>
+              <input type="text" name="cCity" id="City">
+            </div>
+            <div class="field">
+              <label for="Submit" class="btn-submit">submit</label>
+              <input type="Submit" name="Submit" id="Submit">
+            </div>
+          </div>
+        </div>
+      </form >
+      </div>
+      <div class="right">
+        <h3>Your choice</h3>
+        <img src="/Images/3.png" alt="car picture" height="150px">
+        <h3>Description</h3>
+    
+        <p><b>Range</b> .....</p>
+        <p><b>Segment</b> ..... </p>
+        <p><b>Price</b> .....</p>
+
+        <p>Saving the planet with one rental at a time!</p> 
+        <p>Welcome back to MuskHaveCars!</p>
+        
+
+        
+        <p><b>Color  </b> <input type="color" name="color" id="car color"></p>
+
+        
+      </div>
+    </div>
+
+    <!--     <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script> 
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>

@@ -58,5 +58,17 @@ public class MuskController {
         return"bil";
     }
 
+    @PostMapping("/postPage3Data")
+    public String customerInfo (@RequestParam String fName, @RequestParam String lName, @RequestParam String address, @RequestParam Integer pnr, @RequestParam String email, @RequestParam String pNumber, @RequestParam String zCode, @RequestParam String cCity, HttpServletResponse response) throws IOException {
+        System.out.println(fName);
+        System.out.println(lName);
+        System.out.println(address);
+        System.out.println(pnr);
+        System.out.println(cCity);
 
+        response.sendRedirect("http://localhost:8080/page4");
+
+        return "hej";
+
+    }
 }

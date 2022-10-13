@@ -1,0 +1,110 @@
+html,body {
+    margin : 0px;
+    padding: 0px;
+    width:100%;
+    height:100%;
+    font-family: "Roboto Condensed" ;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    height : 150px;
+    background-color: black;
+    color : white
+    ima
+}
+.navbar img {
+    height : 150px;
+    width: 200px;
+}
+#orange {
+    color : orangered;
+}
+
+#white {
+    color: white;
+}
+.navbar .menu-options {
+    display: flex;
+    gap : 30px;
+}
+
+.main-container {
+    display: flex;
+    max-width:60%;
+    min-height: 100%;
+    margin:  0px auto;
+}
+
+.left {
+    width:60%;
+    padding: 30px 20px 20px 20px;
+}
+
+.right {
+    width:40%;
+    padding: 80px 20px 20px 20px ;
+    background-color:#f8f8f8;
+    display :flex;
+    flex-direction: column;
+}
+.right img {
+    
+    margin-left : auto;
+    margin-right : auto;
+    margin-top: 30px;
+}
+.right .medium-title {
+    
+}
+
+.login-section{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.driver-info{
+    padding-bottom: 20px;
+}
+.login-section button{
+    color :orangered;
+    padding: 10px 25px;
+    border: 2px solid orangered;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.login-section button:hover{
+    color :white;
+    background-color: orangered;
+    padding: 10px 25px;
+    border: 2px solid orangered;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.note-to-driver {
+    box-shadow: 0 0 10px lightgray;
+    padding : 15px;
+    margin-bottom: 15px;
+}
+.fields {
+    display: flex;
+    flex-direction: column;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding : 10px 0px;
+}
+.column-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.btn-submit {
+    color : white;
+}

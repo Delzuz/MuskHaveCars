@@ -17,6 +17,10 @@ public class Customer {
     private String email;
     private String phoneNumber;
 
+    private String zipCode;
+    private String customerCity;
+
+
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Rental> rentals = new ArrayList<>();
 
@@ -24,7 +28,7 @@ public class Customer {
 
     }
 
-    public Customer(Long id, String firstName, String lastName, String address, Integer PNR, String email, String phoneNumber) {
+    public Customer(Long id, String firstName, String lastName, String address, Integer PNR, String email, String phoneNumber, String zipCode, String customerCity) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -32,7 +36,8 @@ public class Customer {
         this.PNR = PNR;
         this.email = email;
         this.phoneNumber = phoneNumber;
-
+        this.zipCode = zipCode;
+        this.customerCity = customerCity;
     }
 
     public Long getId() {
@@ -97,5 +102,21 @@ public class Customer {
 
     public void setRentals(List<Rental> rentals) {
         this.rentals = rentals;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getCustomerCity() {
+        return customerCity;
+    }
+
+    public void setCustomerCity(String customerCity) {
+        this.customerCity = customerCity;
     }
 }
