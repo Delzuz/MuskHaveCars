@@ -16,6 +16,8 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 @RestController
 public class MuskController {
 
@@ -77,8 +79,6 @@ public class MuskController {
         System.out.println(finalStartInfo);
 
 
-
-
         /*Car car = (Car) carRepository.findById(1L);*/
         Long idLocation = Long.valueOf(finalStartInfo.getIDlocation());
         Long idCar = Long.valueOf(finalStartInfo.getIDcar());
@@ -87,21 +87,22 @@ public class MuskController {
 
 
 
-
-
         GeoLocation geoLocation = geoRepository.findById(idLocation).orElse(null);
         Car car = carRepository.findById(idCar).orElse(null);
 
-        Rental rental = new Rental(fromDate, toDate, 500);
+
+
+        Long dateDiff = DAYS.between(fromDate, toDate);
+        assert car != null;
+        Long totalPriceLong = car.getCarSegment().getPrice()*dateDiff;
+        Integer totalPrice = Math.toIntExact(totalPriceLong);
+        System.out.println(totalPrice);
+        Rental rental = new Rental(fromDate, toDate, totalPrice);
 
         rental.setCustomer(nyaKunden);
         rental.setCar(car);
-
         System.out.println(rental);
         rentalRepository.save(rental);
-
-
-
 
 
         response.sendRedirect("http://localhost:8080/page4");
