@@ -38,6 +38,7 @@ public class MuskController {
     @PostMapping("/getSession")
     public String cookieTest(@RequestParam String from, @RequestParam String to, HttpSession session, HttpServletResponse response) throws IOException {
         StartInfo startInfo = new StartInfo();
+        //startInfo.setFrom(); osv
         session.setAttribute("startInfo", startInfo);
         System.out.println(from);
         System.out.println(to);
