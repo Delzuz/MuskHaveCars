@@ -109,4 +109,21 @@ public class MuskController {
         return "hej";
 
     }
+
+    @GetMapping("/car")
+    public Car carToReturn(HttpSession session) {
+
+        /*
+        StartInfo startInfo = (StartInfo) session.getAttribute("startInfo");
+        Long carId = Long.valueOf(startInfo.getIDcar());
+        List<Car> cars = (List<Car>) carRepository.findById(carId).orElse(null);
+         */
+        StartInfo startInfo = (StartInfo) session.getAttribute("startInfo");
+        Long carId = Long.valueOf(startInfo.getIDcar());
+        Car car = carRepository.findById(carId).get();
+
+        System.out.println(car);
+        return car;
+    }
+
 }
