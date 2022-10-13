@@ -14,9 +14,10 @@ public class CarSegment {
     private Integer price;
     private String description;
 
+    /*
     @OneToMany(mappedBy = "carSegment", cascade = CascadeType.ALL)
     private List<Car> cars = new ArrayList<>();
-
+*/
 
     public CarSegment() {
 
@@ -61,7 +62,7 @@ public class CarSegment {
     public void setDescription(String description) {
         this.description = description;
     }
-
+/*
     public List<Car> getCars() {
         return cars;
     }
@@ -69,4 +70,6 @@ public class CarSegment {
     public void setCars(List<Car> cars) {
         this.cars = cars;
     }
+
+ */
 }
