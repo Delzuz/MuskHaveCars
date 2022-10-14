@@ -123,4 +123,15 @@ public class MuskController {
 
     }
 
+    @GetMapping("/carsSort")
+    public List<Car> carsSort(@RequestParam String sort) {
+        if (sort.equals("range")) {
+            List<Car> cars = (List<Car>) carRepository.sortByRange();
+        }
+
+        List<Car> cars = (List<Car>) carRepository.findAll();
+        return cars;
+    }
+
+
 }
