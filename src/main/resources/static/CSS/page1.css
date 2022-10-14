@@ -135,3 +135,19 @@ html,body {
 .btn-submit {
   color : white;
 }
+
+.hide {
+  
+  display: none;
+}
+
+.carChoice {
+  color: red;
+}
+.fromLabel {
+  color: red;
+
+}
+.toLabel {
+color: red;
+}
