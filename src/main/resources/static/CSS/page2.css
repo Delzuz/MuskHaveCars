@@ -29,6 +29,7 @@
 
 #white {
     color: white;
+    text-decoration: none;
 }
 
 #orange {
@@ -67,6 +68,10 @@
     margin: 25px;
 
     
+}
+
+a:link {
+    text-decoration: none;
 }
 
 /* .elon { 

@@ -13,8 +13,8 @@ html,body {
     align-items: center;
     height : 150px;
     background-color: black;
-    color : white
-    ima
+    color : white;
+    
 }
 .navbar img {
     height : 150px;
@@ -107,4 +107,8 @@ html,body {
 }
 .btn-submit {
     color : white;
+}
+
+a:link {
+    text-decoration: none;
 }
