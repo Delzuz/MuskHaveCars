@@ -35,22 +35,33 @@
         
         <!-- div för inre container som håller de olika form fälten  -->
         <div class="container-md">
-            <form class="form-control test" id="con" action="/postPage1Data" method="post">
+            <form class="form-control test" id="con" action="/postPage1Data" method="post" onsubmit="return goingToNextPage();">
 
                 <label>Upphämtningsplats</label><br>
                 <select class="form-select form-select-lg locationsArray " aria-label=".form-select-lg example"  name="location">
-                    
+                   
                 </select><br>
-
-
+                
+                <div class="carChoice hide">
+                    VÄlj bil!
+                </div>
 
 
                 <label>From date</label>
 
 
-                <input type="date" class="date" id="from" name="from"/>
+                <input type="date" class="date from" id="from" name="from"/>
+                <div class="fromLabel hide">
+                    VÄlj datum!
+                </div>
+
+
                 <label>To date</label><br />
-                <input type="date" class="date" id="to" name="to"/><br>
+                <input type="date" class="date to" id="to" name="to"/><br>
+                <div class="toLabel hide">
+                   bitch!
+                </div>
+
 
 
                 <input type="submit" value="Book it NOW!" class="bookButton btn btn-primary btn-lg"/>
