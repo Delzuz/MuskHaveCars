@@ -20,10 +20,10 @@ public class Customer {
     private String zipCode;
     private String customerCity;
 
-
+/* test
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Rental> rentals = new ArrayList<>();
-
+*/
     public Customer() {
 
     }
@@ -95,7 +95,7 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
+/*test
     public List<Rental> getRentals() {
         return rentals;
     }
@@ -103,7 +103,7 @@ public class Customer {
     public void setRentals(List<Rental> rentals) {
         this.rentals = rentals;
     }
-
+*/
     public String getZipCode() {
         return zipCode;
     }

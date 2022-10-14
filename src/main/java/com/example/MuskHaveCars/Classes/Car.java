@@ -13,10 +13,10 @@ public class Car {
     private String carName;
     private String description;
     private Integer range;
-
+/* test
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<Rental> rentals = new ArrayList<>();
-
+*/
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<CarLocation> carLocations = new ArrayList<>();
 
@@ -66,7 +66,7 @@ public class Car {
     public void setRange(Integer range) {
         this.range = range;
     }
-
+/* test
     public List<Rental> getRentals() {
         return rentals;
     }
@@ -74,7 +74,7 @@ public class Car {
     public void setRentals(List<Rental> rentals) {
         this.rentals = rentals;
     }
-
+*/
     public List<CarLocation> getCarLocations() {
         return carLocations;
     }

@@ -19,16 +19,16 @@ const locations = document.querySelector(".locationsArray")
             locations.innerHTML = html
 
         }
-        const form = document.querySelector(".test")
+        // const form = document.querySelector(".test")
 
-        const userAction = async () => {
-            const response = await fetch('http://localhost:8080/postPage1Data', {
-                method: 'POST',
-                body: form,
-                headers: {
-                    'Contenttype': 'application/json'
-                }
-            });
-            const myJson = await response.json()
+        // const userAction = async () => {
+        //     const response = await fetch('http://localhost:8080/postPage1Data', {
+        //         method: 'POST',
+        //         body: form,
+        //         headers: {
+        //             'Contenttype': 'application/json'
+        //         }
+        //     });
+        //     const myJson = await response.json()
 
-        }
+        // }

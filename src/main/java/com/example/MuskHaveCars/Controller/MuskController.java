@@ -104,6 +104,8 @@ public class MuskController {
         System.out.println(rental);
         rentalRepository.save(rental);
 
+        session.setAttribute("rentalInfo", rental);
+
 
         response.sendRedirect("http://localhost:8080/page4");
 
@@ -125,6 +127,16 @@ public class MuskController {
 
         System.out.println(car);
         return car;
+    }
+
+    @GetMapping("/getConfirmation")
+    public Rental rentalInformation(HttpSession session) {
+
+        Rental x = (Rental) session.getAttribute("rentalInfo");
+        Rental rental = rentalRepository.findById(x.getId()).get();
+        return rental;
+
+
     }
 
 }
