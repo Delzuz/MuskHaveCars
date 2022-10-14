@@ -1,13 +1,7 @@
 
 const grabImage = document.querySelector(".grabMe")
 
-// testScript() 
 
-// function testScript() {
-//     grabImage.src = "/Images/1.png"
-
-
-// }
 
 const grabbedCar = document.querySelector(".printCar")
 const cars = document.querySelector(".carResult")
@@ -37,15 +31,5 @@ async function printCars() {
     grabbedSegment.innerHTML = bil.carSegment.segmentName
     grabbedPrice.innerHTML = `${bil.carSegment.price} sek/day`
 
-    // let html = ''
-   
-    // html += `<div class="row">
-    // <img src="/Images/${bil.id}.png">
-    // <div class="carName">${bil.carName}</div>
-    // <div class="carDescription">${bil.description}</div>
-    // </div>`
-
-
-    // grabbedCar.innerHTML = html
 
 }

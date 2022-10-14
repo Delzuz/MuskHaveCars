@@ -39,18 +39,14 @@ public class MuskController {
     @GetMapping("/geoCities")
     public List<GeoLocation> geoCities () {
        List<GeoLocation> geoCities = (List<GeoLocation>) geoRepository.findAll();
-       return  geoCities;
+       return geoCities;
 
     }
 
     @PostMapping("/postPage1Data")
     public String cookieTest(@RequestParam Integer location, @RequestParam String from, @RequestParam String to, HttpSession session, HttpServletResponse response) throws IOException {
         StartInfo startInfo = new StartInfo(location,from,to);
-        //startInfo.setFrom(); osv
         session.setAttribute("startInfo", startInfo);
-        /*System.out.println(from);
-        System.out.println(to);
-        System.out.println(location);*/
         response.sendRedirect("http://localhost:8080/page2");
 
         return "hej";
@@ -78,19 +74,13 @@ public class MuskController {
         StartInfo finalStartInfo = (StartInfo) session.getAttribute("startInfo");
         System.out.println(finalStartInfo);
 
-
-        /*Car car = (Car) carRepository.findById(1L);*/
         Long idLocation = Long.valueOf(finalStartInfo.getIDlocation());
         Long idCar = Long.valueOf(finalStartInfo.getIDcar());
         LocalDate fromDate = LocalDate.parse(finalStartInfo.getFrom());
         LocalDate toDate = LocalDate.parse(finalStartInfo.getTo());
 
-
-
         GeoLocation geoLocation = geoRepository.findById(idLocation).orElse(null);
         Car car = carRepository.findById(idCar).orElse(null);
-
-
 
         Long dateDiff = DAYS.between(fromDate, toDate);
         assert car != null;
@@ -115,12 +105,6 @@ public class MuskController {
 
     @GetMapping("/car")
     public Car carToReturn(HttpSession session) {
-
-        /*
-        StartInfo startInfo = (StartInfo) session.getAttribute("startInfo");
-        Long carId = Long.valueOf(startInfo.getIDcar());
-        List<Car> cars = (List<Car>) carRepository.findById(carId).orElse(null);
-         */
         StartInfo startInfo = (StartInfo) session.getAttribute("startInfo");
         Long carId = Long.valueOf(startInfo.getIDcar());
         Car car = carRepository.findById(carId).get();
@@ -132,8 +116,8 @@ public class MuskController {
     @GetMapping("/getConfirmation")
     public Rental rentalInformation(HttpSession session) {
 
-        Rental x = (Rental) session.getAttribute("rentalInfo");
-        Rental rental = rentalRepository.findById(x.getId()).get();
+        Rental sessionRental = (Rental) session.getAttribute("rentalInfo");
+        Rental rental = rentalRepository.findById(sessionRental.getId()).get();
         return rental;
 
 
