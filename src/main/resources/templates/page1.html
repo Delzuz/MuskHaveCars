@@ -1,86 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MuskHaveCars</title>
-    <link rel="stylesheet" href="../static/CSS/page1.css">
-    <link rel="stylesheet" href="../static/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/page1.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="navbar">
-        <img alt="elon musk" src="../Images/customerHeader.png" />
-        <div class="menu-options">
-          <p id="orange">✔ 1. Welcome</p>
-          <p id="white"> 2. Car of choice</p>
-          <p id="white"> 3.Customer information</p>
-          <p id="white"> 4. Booking Confirmation</p>
-        </div>
-        <br>
-      </nav>
+<nav class="navbar">
+    <img alt="elon musk" src="../Images/customerHeader.png"/>
+    <div class="menu-options">
+        <p id="orange">✔ 1. Welcome</p>
+        <p id="white"> 2. Car of choice</p>
+        <p id="white"> 3.Customer information</p>
+        <p id="white"> 4. Booking Confirmation</p>
+    </div>
+    <br>
+</nav>
 
-      <div class="test">
-        <h1>Musk Have Cars</h1>
+<div class="test">
+    <h1>Musk Have Cars</h1>
     <h2>The number one electric car rental site in the world</h2>
     <p class="probably">probably...</p>
-      </div>
+</div>
 
 <!-- <div class="d-flex flex-column justify-content-center w-100 h-100 test"> -->
-    <!-- Container div för att highlighta boxen allt ska vara i -->
-    
-    <div class="container-md test">
-        
-        <!-- div för inre container som håller de olika form fälten  -->
-        <div class="container-md">
-            <form class="form-control test" id="con" action="/postPage1Data" method="post" onsubmit="return goingToNextPage();">
+<!-- Container div för att highlighta boxen allt ska vara i -->
 
-                <label>Upphämtningsplats</label><br>
-                <select class="form-select form-select-lg locationsArray " aria-label=".form-select-lg example"  name="location">
-                   
-                </select><br>
-                
-                <div class="carChoice hide">
-                    VÄlj bil!
-                </div>
+<div class="container-md test">
 
+    <!-- div för inre container som håller de olika form fälten  -->
+    <div class="container-md">
+        <form class="form-control test" id="con" action="/postPage1Data" method="post"
+              onsubmit="return goingToNextPage();">
 
-                <label>From date</label>
+            <label>Upphämtningsplats</label><br>
+            <select class="form-select form-select-lg locationsArray " aria-label=".form-select-lg example"
+                    name="location">
 
+            </select><br>
 
-                <input type="date" class="date from" id="from" name="from"/>
-                <div class="fromLabel hide">
-                    VÄlj datum!
-                </div>
+            <div class="carChoice hide">
+                VÄlj bil!
+            </div>
 
 
-                <label>To date</label><br />
-                <input type="date" class="date to" id="to" name="to"/><br>
-                <div class="toLabel hide">
-                   bitch!
-                </div>
+            <label>From date</label>
 
 
+            <input type="date" class="date from" id="from" name="from"/>
+            <div class="fromLabel hide">
+                VÄlj datum!
+            </div>
 
-                <input type="submit" value="Book it NOW!" class="bookButton btn btn-primary btn-lg"/>
-            </form>
 
-            
-        </div>
+            <label>To date</label><br/>
+            <input type="date" class="date to" id="to" name="to"/><br>
+            <div class="toLabel hide">
+                bitch!
+            </div>
+
+
+            <input type="submit" value="Book it NOW!" class="bookButton btn btn-primary btn-lg"/>
+        </form>
+
 
     </div>
+
+</div>
 <!-- </div> -->
 
+<!-- footer / bottom navbar -->
 <div class="footer">
     <a th:href="@{/About}">About us</a>
-<a th:href="@{/Sustainability}">Sustainability</a>
-<a href="www.google.com">Contect us</a>
-
-
+    <a th:href="@{/Sustainability}">Sustainability</a>
+    <a th:href="@{ContactUs}">Contact us</a>
 </div>
 
 <script src="/JavaScript/page1.js"></script>

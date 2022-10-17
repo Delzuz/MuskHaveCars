@@ -28,14 +28,19 @@ public class SecondController {
         return "page4";
     }
 
-        @GetMapping("/About")
+    @GetMapping("/About")
     public String AboutUs() {
         return "AboutUs";
     }
-    
+
     @GetMapping("/Sustainability")
     public String Sustainability() {
         return "Sustainability";
+    }
+
+    @GetMapping("/ContactUs")
+    public String ContactUs() {
+        return "ContactUs";
     }
 
 }
