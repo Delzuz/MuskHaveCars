@@ -5,7 +5,7 @@ const toDate = document.querySelector(".to")
 const choice = document.querySelector(".carChoice")
 const fromLabel = document.querySelector(".fromLabel")
 const toLabel = document.querySelector(".toLabel")
-        let date = new Date();  
+        
         async function getAllLocations() {
             let locationsArray = await fetch('http://localhost:8080/geoCities')
             return await locationsArray.json()
@@ -15,7 +15,7 @@ const toLabel = document.querySelector(".toLabel")
         printLocations()
         async function printLocations() {
             let locationsFetch = await getAllLocations()
-            let html = '<option value="">Choose Car</option> '
+            let html = '<option value="">Choose a location</option> '
             for (let l of locationsFetch) {
                 html += `
                 <option value="${l.id}">${l.cityName}</option> `
@@ -25,9 +25,30 @@ const toLabel = document.querySelector(".toLabel")
 
         }
 
+        function getTodaysDate() {
+            let today = new Date
+            let dd = today.getDate();
+        
+            let mm = today.getMonth() + 1;
+            let yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd;
+            }
+        
+            if (mm < 10) {
+                mm = '0' + mm;
+            }
+        
+            today = yyyy + '-' + mm + '-' + dd;
+            console.log(today);
+            return today;
+        }
+        
+
         function goingToNextPage () {
             console.log("TEST")
-            console.log(date)
+            
+            console.log(getTodaysDate())
             if(locations.value === "") {
                 choice.classList.remove("hide")
                 
@@ -35,7 +56,7 @@ const toLabel = document.querySelector(".toLabel")
             } else{choice.classList.add("hide")}
             console.log(locations.value)
 
-            if(fromDate.value < date) {
+            if(fromDate.value < getTodaysDate()) {
                 fromLabel.classList.remove("hide")
                 return false;
             } else {fromLabel.classList.add("hide")}

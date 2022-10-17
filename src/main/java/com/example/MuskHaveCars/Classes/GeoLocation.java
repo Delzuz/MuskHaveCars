@@ -12,10 +12,10 @@ public class GeoLocation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String cityName;
-
+/*
     @OneToMany(mappedBy = "geoLocation", cascade = CascadeType.ALL)
     private List<CarLocation> carLocations = new ArrayList<>();
-
+*/
     public GeoLocation() {
 
     }
@@ -41,7 +41,7 @@ public class GeoLocation {
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
-
+/*
     public List<CarLocation> getCarLocations() {
         return carLocations;
     }
@@ -49,4 +49,6 @@ public class GeoLocation {
     public void setCarLocations(List<CarLocation> carLocations) {
         this.carLocations = carLocations;
     }
+
+ */
 }

@@ -1,10 +1,7 @@
 package com.example.MuskHaveCars.Controller;
 
 import com.example.MuskHaveCars.Classes.*;
-import com.example.MuskHaveCars.Repository.CarRepository;
-import com.example.MuskHaveCars.Repository.CustomerRepository;
-import com.example.MuskHaveCars.Repository.GeoLocationRepository;
-import com.example.MuskHaveCars.Repository.RentalRepository;
+import com.example.MuskHaveCars.Repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -29,6 +27,9 @@ public class MuskController {
     CustomerRepository customerRepo;
     @Autowired
     RentalRepository rentalRepository;
+    @Autowired
+    CarLocationRepository carLocationRepository;
+
 
     @GetMapping("/cars")
     public List<Car> cars() {
@@ -96,6 +97,14 @@ public class MuskController {
 
         session.setAttribute("rentalInfo", rental);
 
+        List<CarLocation> carLocations = (List<CarLocation>) carLocationRepository.findAll();
+
+        for (CarLocation carLocation : carLocations) {
+            if (carLocation.getGeoLocation().getId() == idLocation && carLocation.getCar().getId() == idCar) {
+                carLocation.setQuantity(carLocation.getQuantity()-1);
+                carLocationRepository.save(carLocation);
+            }
+        }
 
         response.sendRedirect("http://localhost:8080/page4");
 
@@ -132,6 +141,36 @@ public class MuskController {
         List<Car> cars = (List<Car>) carRepository.findAll();
         return cars;
     }
+
+    @GetMapping("/carsLocation")
+    public List<Car> carsLocation(HttpSession session) {
+        StartInfo locationInfo = (StartInfo) session.getAttribute("startInfo");
+        Long locationId = Long.valueOf(locationInfo.getIDlocation());
+        List<CarLocation> allLocations = (List<CarLocation>) carLocationRepository.findAll();
+
+        List<Car> cars = new ArrayList<>();
+        List<Integer> numberOfCars = new ArrayList<>();
+
+        for (CarLocation carsByLocation : allLocations) {
+            if (locationId == Long.valueOf(carsByLocation.getGeoLocation().getId())) {
+                if (carsByLocation.getQuantity() > 0) {
+                    cars.add(carsByLocation.getCar());
+                    numberOfCars.add(carsByLocation.getQuantity());
+                }
+            }
+        }
+        session.setAttribute("quantity", numberOfCars);
+
+        return cars;
+    }
+
+    @GetMapping("/carQuantity")
+    public List<Integer> carQuantity(HttpSession session) {
+        List<Integer> numberOfCars = (List<Integer>) session.getAttribute("quantity");
+
+        return numberOfCars;
+    }
+
 
 
 }

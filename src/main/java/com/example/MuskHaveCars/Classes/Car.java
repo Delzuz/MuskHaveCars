@@ -17,9 +17,10 @@ public class Car {
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<Rental> rentals = new ArrayList<>();
 */
+    /*
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<CarLocation> carLocations = new ArrayList<>();
-
+*/
     @ManyToOne
     private CarSegment carSegment;
 
@@ -74,7 +75,8 @@ public class Car {
     public void setRentals(List<Rental> rentals) {
         this.rentals = rentals;
     }
-*/
+
+
     public List<CarLocation> getCarLocations() {
         return carLocations;
     }
@@ -82,6 +84,8 @@ public class Car {
     public void setCarLocations(List<CarLocation> carLocations) {
         this.carLocations = carLocations;
     }
+    */
+
 
     public CarSegment getCarSegment() {
         return carSegment;

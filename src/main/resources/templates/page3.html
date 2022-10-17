@@ -35,7 +35,7 @@
           <button>Login</button>
         </div> -->
       </br>
-      <form action="/postPage3Data" method="POST">
+      <form action="/postPage3Data" method="POST" onsubmit="return checkInfo();">
         <label for="titel">Titel</label>
         <select name="titel" id="titel">
           <optgroup label="Titel">
@@ -49,7 +49,7 @@
           <div class="column-container">
             <div class="field">
               <label for="FirstName">First Name</label>
-              <input type="text" name="fName" id="FirstName">
+              <input type="text" name="fName" class="firstName"id="FirstName">
             </div>
             <div class="field">
               <label for="LastName">Last Name</label>
@@ -63,7 +63,7 @@
             </div>
             <div class="field">
               <label for="Email">Email</label>
-              <input type="text" name="email" id="Email">
+              <input type="text" name="email" class="emailForValid" id="Email">
             </div>
           </div>
           <div class="field">

@@ -41,6 +41,15 @@
         <form class="form-control test" id="con" action="/postPage1Data" method="post"
               onsubmit="return goingToNextPage();">
 
+                <label>Upphämtningsplats</label><br>
+                <select class="form-select form-select-lg locationsArray " aria-label=".form-select-lg example"  name="location">
+                   
+                </select><br>
+                
+                <div class="carChoice hide">
+                    You need to choose a location.
+                </div>
+
             <label>Upphämtningsplats</label><br>
             <select class="form-select form-select-lg locationsArray " aria-label=".form-select-lg example"
                     name="location">
@@ -51,9 +60,18 @@
                 VÄlj bil!
             </div>
 
+                <input type="date" class="date from" id="from" name="from"/>
+                <div class="fromLabel hide">
+                    Please choose a date for pickup.
+                </div>
 
             <label>From date</label>
 
+                <label>To date</label><br />
+                <input type="date" class="date to" id="to" name="to"/><br>
+                <div class="toLabel hide">
+                   The drop off date can't be earlier or the same date as the pickup date.
+                </div>
 
             <input type="date" class="date from" id="from" name="from"/>
             <div class="fromLabel hide">
