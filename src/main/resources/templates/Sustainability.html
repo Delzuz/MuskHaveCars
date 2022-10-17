@@ -1,25 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css"> 
+    <link rel="stylesheet" href="/CSS/sust.css"> 
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/homebutton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
 </head>
 <body>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Welcome to MuskHaveCars Sweden</b></span></h1>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Sustainability</b></span></h2>
+    <h1>
+        MuskHaveCars
+    </h1>
 
-<img src="https://www.hertzpageo.com/img/sweden/Hallbarhet/Hallbarhet_hero_desktop.jpg" height="600px" width="1400" style="height: 300px; width: 1400; object-fit: cover; margin-left: 0%;">
+    <div class="image">
+        <img src="https://www.hertzpageo.com/img/sweden/Hallbarhet/Hallbarhet_hero_desktop.jpg" 
+        height="600px" style="height: 300px; width: 100%; object-fit: cover; opacity: 0.8;">
+
+        <div class="top-left">        
+            <a th:href="@{page1}"><button class="btn"><i class="fa fa-home"> HOME</i></button></a>
+        </div>
+    </div>
+
+    <div>
+        <h2>Hållbarhet</h2>
+        <p>
+        Som ett av Sveriges ledande hyrbilsföretag har vi ett stort ansvar. 
+        </p>
+
+        <p> 
+        Både när det kommer till att förebygga och minska miljöbelastningen från vår verksamhet. 
+        </p>
+
+        <p>
+        Vi är sedan 2002 miljöcertifierade enligt ISO 14001.
+        </p>
+    </div>
 
 
-<h1 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>As one of Sweden's leading rental car companies, we have a great responsibility. Both when it comes to preventing and reducing the environmental impact from our operations. We have been environmentally certified according to ISO 14001 since 2002.<span class="Apple-converted-space"> </span></b></span></h1>
+      <div class="flex-container">
+
+        <div class="flex-child magenta">
+            <h3>Miljöpolicy</h3>
+            <p>
+                Vårt mål är alltid att leverera bästa möjliga kundupplevelse med minsta möjlig miljöpåverkan. Läs mer om vår fem fokusområden.
+            </p>
+        </div>
+        
+        <div class="flex-child green">
+           <h3>Klimatkompensation</h3>
+            <p>
+                Vi erbjuder frivillig klimatkompensering för dig som hyrbilskund. Läs mer om hur du kan kompensera för de fossila utsläppen från din hyrbil.
+            </p>
+        </div>
+
+        <div class="flex-child blue">
+            <h3>Övriga initiativ</h3>
+            <p>
+                Vi på Hertz arbetar dagligen för att minska vår miljö påverkan både när det kommer till vår fordonsflotta, drivmedel men även bilvård.
+            </p>
+        </div>
+        
+      </div>
+
+  <!-- footer / bottom navbar -->
+<div class="footer">
+    <a th:href="@{/About}">About us</a>
+    <a th:href="@{/Sustainability}">Sustainability</a>
+    <a th:href="@{ContactUs}">Contact us</a>
+</div>
+
 </body>
 </html>
