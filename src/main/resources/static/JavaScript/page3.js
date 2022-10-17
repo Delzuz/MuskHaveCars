@@ -11,7 +11,44 @@ const grabbedPrice = document.querySelector(".grabPrice")
 const grabDescription = document.querySelector(".descriptionText")
 
 
+const fName = document.querySelector(".firstName")
+const emailValid = document.querySelector(".emailForValid")
 
+function checkInfo() {
+    
+    console.log(fName + "den kom")
+
+    if (fName.value === "") {
+        console.log("det funkar INTe")
+        return false;
+    } else {
+        console.log("DET FUNKAR")
+        
+    }
+
+    if(!isValidEmailAddress(emailValid.value)) {
+        console.log("Email är inte bra ")
+        return false;
+    } else {
+        console.log("email är bra")
+        
+    }
+
+}
+
+function isValidEmailAddress(email){
+
+    return String(email)
+
+        .toLowerCase()
+
+        .match(
+
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        ) != null
+
+};
         
 async function getAllCars() {
     let carArray = await fetch('http://localhost:8080/car')
@@ -33,3 +70,4 @@ async function printCars() {
 
 
 }
+
