@@ -97,6 +97,14 @@ public class MuskController {
 
         session.setAttribute("rentalInfo", rental);
 
+        List<CarLocation> carLocations = (List<CarLocation>) carLocationRepository.findAll();
+
+        for (CarLocation carLocation : carLocations) {
+            if (carLocation.getGeoLocation().getId() == idLocation && carLocation.getCar().getId() == idCar) {
+                carLocation.setQuantity(carLocation.getQuantity()-1);
+                carLocationRepository.save(carLocation);
+            }
+        }
 
         response.sendRedirect("http://localhost:8080/page4");
 
@@ -145,11 +153,12 @@ public class MuskController {
 
         for (CarLocation carsByLocation : allLocations) {
             if (locationId == Long.valueOf(carsByLocation.getGeoLocation().getId())) {
-                cars.add(carsByLocation.getCar());
-                numberOfCars.add(carsByLocation.getQuantity());
+                if (carsByLocation.getQuantity() > 0) {
+                    cars.add(carsByLocation.getCar());
+                    numberOfCars.add(carsByLocation.getQuantity());
+                }
             }
         }
-
         session.setAttribute("quantity", numberOfCars);
 
         return cars;
