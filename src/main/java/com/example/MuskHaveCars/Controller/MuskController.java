@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -132,15 +133,6 @@ public class MuskController {
 
     }
 
-    @GetMapping("/carsSort")
-    public List<Car> carsSort(@RequestParam String sort) {
-        if (sort.equals("range")) {
-            List<Car> cars = (List<Car>) carRepository.sortByRange();
-        }
-
-        List<Car> cars = (List<Car>) carRepository.findAll();
-        return cars;
-    }
 
     @GetMapping("/carsLocation")
     public List<Car> carsLocation(HttpSession session) {
@@ -170,7 +162,4 @@ public class MuskController {
 
         return numberOfCars;
     }
-
-
-
 }
