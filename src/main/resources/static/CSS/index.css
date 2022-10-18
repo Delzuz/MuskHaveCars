@@ -1,0 +1,31 @@
+/* Design för alla 3 sidor */
+
+body {
+    height: 200px;
+    background-color: black; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, #1CB0EC , rgb(243, 207, 241));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    opacity: 0.7;
+}
+
+h2 {
+  font-size: 30px;
+  opacity: 0.7;
+}
+
+h3 {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+p {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+

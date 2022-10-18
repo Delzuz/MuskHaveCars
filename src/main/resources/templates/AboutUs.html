@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css"> 
+    <link rel="stylesheet" href="/CSS/about.css"> 
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/homebutton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        MuskHaveCars
+    </h1>
+
+    
+    <div class="image">
+      <img src="https://www.hertzpageo.com/img/sweden/Om Hertz/Om_hertz_desktop_hero.jpg" 
+      height="600px" style="height: 300px; width: 100%; object-fit: cover; opacity: 0.8;">
+
+      <div class="top-left">        
+          <a th:href="@{page1}"><button class="btn"><i class="fa fa-home"> HOME</i></button></a>
+      </div>
+  </div>
+
+    <div>
+        <h2>About us...</h2>
+        <p>
+        Grundades i Chicago 1918 och kom till Stockholm 1960.
+        </p>
+
+        <p> 
+        Idag är vi marknadsledande i Sverige och tillhör en bransch som är på stark frammarsch.
+        </p>
+
+        <p>
+        Vi är sedan 2002 miljöcertifierade enligt ISO 14001.
+        </p>
+    </div>
+
+    <!-- 2 st centrerade -->
+    <div class="float-container">
+
+        <div class="float-child green">
+          <h3>Vi som jobbar här</h3>
+          <p>
+            Growl at dogs in my sleep slap kitten brother with paw so suddenly go on wild-eyed crazy rampage or cats making all the muffins milk the cow. The dog smells bad scratch the box.
+          </p>
+        </div>
+        
+        <div class="float-child blue">
+          <h3>Företaget</h3>
+          <p>
+            Tickle my belly for food when you're in the kitchen even if it's salad pretend not to be evil poop on couch i just saw other cats inside the house and nobody ask me before using my litter box more napping.
+          </p>
+        </div>
+        
+      </div>
+
+      <!-- footer / bottom navbar -->
+<div class="footer">
+  <a th:href="@{/About}">About us</a>
+  <a th:href="@{/Sustainability}">Sustainability</a>
+  <a th:href="@{ContactUs}">Contact us</a>
+</div>
+
+
+</body>
+</html>
