@@ -16,22 +16,22 @@
 </head>
 
 <body>
-<nav class="navbar">
-    <img alt="elon musk" src="../Images/customerHeader.png"/>
-    <div class="menu-options">
-        <p id="orange">✔ 1. Welcome</p>
-        <p id="white"> 2. Car of choice</p>
-        <p id="white"> 3.Customer information</p>
-        <p id="white"> 4. Booking Confirmation</p>
-    </div>
-    <br>
-</nav>
+    <nav class="navbar">
+        <img alt="elon musk" src="../Images/customerHeader.png" />
+        <div class="menu-options">
+          <p id="orange">✔ 1. Book a car</p>
+          <p id="white"> 2. Car of choice</p>
+          <p id="white"> 3.Customer information</p>
+          <p id="white"> 4. Booking Confirmation</p>
+        </div>
+        <br>
+      </nav>
 
-<div class="test">
-    <h1>Musk Have Cars</h1>
-    <h2>The number one electric car rental site in the world</h2>
-    <p class="probably">probably...</p>
-</div>
+      <div class="test">
+        <h1>Musk Have Cars <span>The number one electric car rental site in the world</span></h1>
+    <!-- <h2>The number one electric car rental site in the world</h2> -->
+    <!-- <p class="probably">probably...</p> -->
+      </div>
 
 <!-- <div class="d-flex flex-column justify-content-center w-100 h-100 test"> -->
 <!-- Container div för att highlighta boxen allt ska vara i -->
@@ -54,11 +54,11 @@
 
             <label>From date</label>
 
-
-            <input type="date" class="date from" id="from" name="from"/>
-            <div class="fromLabel hide">
-                Please choose a date for pickup.
-            </div>
+                <label>To date</label><br />
+                <input type="date" class="date to" id="to" name="to"/><br>
+                <div class="toLabel hide">
+                   You need to choose a date and it can't be earlier or the same date as the pickup date.
+                </div>
 
 
             <label>To date</label><br />
