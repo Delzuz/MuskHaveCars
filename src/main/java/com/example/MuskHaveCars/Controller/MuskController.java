@@ -133,29 +133,7 @@ public class MuskController {
 
     }
 
-    /*
-      @GetMapping("/carsSort")
-    public List<Car> carsSort(@RequestParam String sort) {
-        List<Car> cars = (List<Car>) carLocationRepository.sortByRange();
-        return cars;
-        /*
 
-    @GetMapping("/carsSort")
-    public List<CarLocation> carsSort(HttpServletResponse response) throws IOException {
-       // if (sort.equals("range")) {
-            List<CarLocation> carLocations = (List<CarLocation>) carLocationRepository.findAll();
-            Collections.sort(carLocations, (o1, o2) -> o1.getCar().getRange() - o2.getCar().getRange());
-            response.sendRedirect("http://localhost:8080/page2");
-            return carLocations;
-
-
-      //  }
-      //  return null;
-
-
-
-    }
-*/
     @GetMapping("/carsLocation")
     public List<Car> carsLocation(HttpSession session) {
         StartInfo locationInfo = (StartInfo) session.getAttribute("startInfo");
