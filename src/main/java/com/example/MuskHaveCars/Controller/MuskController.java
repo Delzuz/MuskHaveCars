@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -132,16 +133,29 @@ public class MuskController {
 
     }
 
-    @GetMapping("/carsSort")
+    /*
+      @GetMapping("/carsSort")
     public List<Car> carsSort(@RequestParam String sort) {
-        if (sort.equals("range")) {
-            List<Car> cars = (List<Car>) carRepository.sortByRange();
-        }
-
-        List<Car> cars = (List<Car>) carRepository.findAll();
+        List<Car> cars = (List<Car>) carLocationRepository.sortByRange();
         return cars;
-    }
+        /*
 
+    @GetMapping("/carsSort")
+    public List<CarLocation> carsSort(HttpServletResponse response) throws IOException {
+       // if (sort.equals("range")) {
+            List<CarLocation> carLocations = (List<CarLocation>) carLocationRepository.findAll();
+            Collections.sort(carLocations, (o1, o2) -> o1.getCar().getRange() - o2.getCar().getRange());
+            response.sendRedirect("http://localhost:8080/page2");
+            return carLocations;
+
+
+      //  }
+      //  return null;
+
+
+
+    }
+*/
     @GetMapping("/carsLocation")
     public List<Car> carsLocation(HttpSession session) {
         StartInfo locationInfo = (StartInfo) session.getAttribute("startInfo");
@@ -170,7 +184,4 @@ public class MuskController {
 
         return numberOfCars;
     }
-
-
-
 }

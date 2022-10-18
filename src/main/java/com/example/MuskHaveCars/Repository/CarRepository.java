@@ -12,9 +12,9 @@ public interface CarRepository extends CrudRepository<Car, Long> {
 
     @Query(value = "select * from car order by car_name", nativeQuery = true)
     List<Car> sortByName();
-
+/*
     @Query(value = "select * from car order by range desc", nativeQuery = true)
     List<Car> sortByRange();
-
+*/
 
 }
