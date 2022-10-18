@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MuskHaveCars</title>
     <link rel="stylesheet" href="/CSS/page1.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="../static/CSS/page1.css">
+    <link rel="stylesheet" href="../static/CSS/footer.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
@@ -29,32 +34,25 @@
       </div>
 
 <!-- <div class="d-flex flex-column justify-content-center w-100 h-100 test"> -->
-    <!-- Container div för att highlighta boxen allt ska vara i -->
-    
-    <div class="container-md test">
-        
-        <!-- div för inre container som håller de olika form fälten  -->
-        <div class="container-md">
-            <form class="form-control test" id="con" action="/postPage1Data" method="post" onsubmit="return goingToNextPage();">
+<!-- Container div för att highlighta boxen allt ska vara i -->
 
-                <label>Upphämtningsplats</label><br>
-                <select class="form-select form-select-lg locationsArray " aria-label=".form-select-lg example"  name="location">
-                   
-                </select><br>
-                
-                <div class="carChoice hide">
-                    You need to choose a location.
-                </div>
+<div class="container-md test">
 
+    <!-- div för inre container som håller de olika form fälten  -->
+    <div class="container-md">
+        <form class="form-control test" id="con" action="/postPage1Data" method="post" onsubmit="return goingToNextPage();">
 
-                <label>From date</label>
+            <label>Upphämtningsplats</label><br>
+            <select class="form-select form-select-lg locationsArray " aria-label=".form-select-lg example"  name="location">
+
+            </select><br>
+
+            <div class="carChoice hide">
+                You need to choose a location.
+            </div>
 
 
-                <input type="date" class="date from" id="from" name="from"/>
-                <div class="fromLabel hide">
-                    Please choose a date for pickup.
-                </div>
-
+            <label>From date</label>
 
                 <label>To date</label><br />
                 <input type="date" class="date to" id="to" name="to"/><br>
@@ -63,15 +61,29 @@
                 </div>
 
 
+            <label>To date</label><br />
+            <input type="date" class="date to" id="to" name="to"/><br>
+            <div class="toLabel hide">
+                You need to choose a date and it can't be earlier or the same date as the pickup date.
+            </div>
 
-                <input type="submit" value="Book it NOW!" class="bookButton btn btn-primary btn-lg"/>
-            </form>
 
-            
-        </div>
+
+            <input type="submit" value="Book it NOW!" class="bookButton btn btn-primary btn-lg"/>
+        </form>
+
 
     </div>
+
+</div>
 <!-- </div> -->
+
+<!-- footer / bottom navbar -->
+<div class="footer">
+    <a th:href="@{/About}">About us</a>
+    <a th:href="@{/Sustainability}">Sustainability</a>
+    <a th:href="@{ContactUs}">Contact us</a>
+</div>
 
 <script src="/JavaScript/page1.js"></script>
 

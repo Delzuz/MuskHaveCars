@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css"> 
+    <link rel="stylesheet" href="/CSS/sust.css"> 
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/homebutton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        MuskHaveCars
+    </h1>
+
+    <div class="image">
+        <img src="https://www.hertzpageo.com/img/sweden/Hallbarhet/Hallbarhet_hero_desktop.jpg" 
+        height="600px" style="height: 300px; width: 100%; object-fit: cover; opacity: 0.8;">
+
+        <div class="top-left">        
+            <a th:href="@{page1}"><button class="btn"><i class="fa fa-home"> HOME</i></button></a>
+        </div>
+    </div>
+
+    <div>
+        <h2>Hållbarhet</h2>
+        <p>
+        Som ett av Sveriges ledande hyrbilsföretag har vi ett stort ansvar. 
+        </p>
+
+        <p> 
+        Både när det kommer till att förebygga och minska miljöbelastningen från vår verksamhet. 
+        </p>
+
+        <p>
+        Vi är sedan 2002 miljöcertifierade enligt ISO 14001.
+        </p>
+    </div>
+
+
+      <div class="flex-container">
+
+        <div class="flex-child magenta">
+            <h3>Miljöpolicy</h3>
+            <p>
+                Vårt mål är alltid att leverera bästa möjliga kundupplevelse med minsta möjlig miljöpåverkan. Läs mer om vår fem fokusområden.
+            </p>
+        </div>
+        
+        <div class="flex-child green">
+           <h3>Klimatkompensation</h3>
+            <p>
+                Vi erbjuder frivillig klimatkompensering för dig som hyrbilskund. Läs mer om hur du kan kompensera för de fossila utsläppen från din hyrbil.
+            </p>
+        </div>
+
+        <div class="flex-child blue">
+            <h3>Övriga initiativ</h3>
+            <p>
+                Vi på Hertz arbetar dagligen för att minska vår miljö påverkan både när det kommer till vår fordonsflotta, drivmedel men även bilvård.
+            </p>
+        </div>
+        
+      </div>
+
+  <!-- footer / bottom navbar -->
+<div class="footer">
+    <a th:href="@{/About}">About us</a>
+    <a th:href="@{/Sustainability}">Sustainability</a>
+    <a th:href="@{ContactUs}">Contact us</a>
+</div>
+
+</body>
+</html>
