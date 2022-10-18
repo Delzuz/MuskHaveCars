@@ -12,27 +12,82 @@ const grabDescription = document.querySelector(".descriptionText")
 
 
 const fName = document.querySelector(".firstName")
+const lNamn = document.querySelector(".lastName")
+const PNR = document.querySelector(".PNR")
 const emailValid = document.querySelector(".emailForValid")
+const pNumber = document.querySelector(".pNumber")
+const Address = document.querySelector(".address")
+const zCode = document.querySelector(".zCode")
+const cCity = document.querySelector(".cCity")
+
 
 function checkInfo() {
     
-    console.log(fName + "den kom")
-
     if (fName.value === "") {
-        console.log("det funkar INTe")
+        console.log("förnamn inte giltig")
         return false;
     } else {
-        console.log("DET FUNKAR")
+        console.log("förnamn ok")
+
+    }
+
+    if (lNamn.value === "") {
+        console.log("efternamn inte giltig")
+        return false;
+    } else {
+        console.log("efternamn ok")
         
+    }
+   
+    if (PNR.value === "") {
+        console.log("person nr inte giltig")
+        return false;
+    } else {
+        console.log("person nr ok")
+    
     }
 
     if(!isValidEmailAddress(emailValid.value)) {
-        console.log("Email är inte bra ")
+        console.log("Email icke giltig")
         return false;
     } else {
-        console.log("email är bra")
+        console.log("email ok")
         
     }
+
+    if (pNumber.value === "") {
+        console.log("person nr inte giltig")
+        return false;
+    } else {
+        console.log("telefon nr ok")
+    
+    }
+
+    if (Address.value === "") {
+        console.log("adress inte giltig")
+        return false;
+    } else {
+        console.log("adress ok")
+    
+    }
+
+    if (zCode.value === "") {
+        console.log("postnr inte giltig")
+        return false;
+    } else {
+        console.log("postnr nr ok")
+    
+    }
+
+    if (cCity.value === "") {
+        console.log("stad inte giltig")
+        return false;
+    } else {
+        console.log("stad ok")
+    
+    }
+
+    
 
 }
 
