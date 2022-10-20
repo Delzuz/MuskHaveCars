@@ -72,8 +72,8 @@ body {
     color : white;
 }
 #form {
-    padding: 30px;
-    margin-top: 30px;
+    padding: 100px;
+    margin-top: 100px;
     margin-left: 500px;
     margin-right: 500px;
     width: 30%;
@@ -113,4 +113,20 @@ body {
     color: #ff3860;
     font-size: 9px;
     height: 13px;
+}
+
+.moveToRight {
+    margin-left: 40px;
+}
+
+.moveRight  {
+    margin-left: 68px;
+}
+
+.formInfo {
+    text-align: center;
+}
+
+.makeGreen {
+    color: #16c60c;
 }

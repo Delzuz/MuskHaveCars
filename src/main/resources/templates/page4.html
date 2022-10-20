@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Fill in your information</title>
-    <link rel="stylesheet" href="/CSS/page4.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
-      rel="stylesheet"
-    />
-     </head>
-  <body>
-    <nav class="navbar">
-      <img alt="elon musk" src="/Images/customerHeader.png" />
-      <div class="menu-options">
-        <p id="white"> 1. Book a car</p>
-        <p id="white"> 2. Car of choice</p>
-        <p id="white"> 3.Customer information</p>
-        <p id="orange">✔ 4. Booking Confirmation</p>
-      </div>
-      <br>
-    </nav>
-    
-        <form id = "form" action="/">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fill in your information</title>
+  <link rel="stylesheet" href="/CSS/page4.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link
+          href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+          rel="stylesheet"
+  />
+</head>
+<body>
+<nav class="navbar">
+  <img alt="elon musk" src="/Images/customerHeader.png" />
+  <div class="menu-options">
+    <p id="white"> 1. Book a car</p>
+    <p id="white"> 2. Car of choice</p>
+    <p id="white"> 3.Customer information</p>
+    <p id="orange"> <span class="makeGreen">✔ </span>4. Booking Confirmation</p>
+  </div>
+  <br>
+</nav>
 
-    <p><b>Confirmation: </b> <span class="grabConf"></span></p>
-    <p><b>Car: </b> <span class="grabCar"></span></p>
-    <p><b>First name: </b> <span class="grabfName"></span></p>
-    <p><b>Last name: </b> <span class="grablName"></span></p>
-    <p><b>From date: </b> <span class="grabfDate"></span></p>
-    <p><b>To date: </b> <span class="grabtDate"></span></p>
-    <p><b>Total price: </b> <span class="grabPrice"></span></p>
+<form id = "form" class="formInfo" action="/">
+
+  <h2><b>Confirmation: </b> <span class="grabConf"></span></h2>
+  <p><b>From date: </b> <span class="grabfDate"></span> <b class="moveToRight">To date: </b> <span class="grabtDate"></span></p>
+  <p><b>First name: </b> <span class="grabfName"></span> <b class="moveRight">Last name: </b> <span class="grablName"></span></p>
+  <p><b>Car: </b> <span class="grabCar"></span></p>
+  <p><b>Total price: </b> <span class="grabPrice"></span></p>
+
 
 </form>
 
-    <script src="/JavaScript/page4.js"></script>
-  </body>
+<script src="/JavaScript/page4.js"></script>
+</body>
 </html>
