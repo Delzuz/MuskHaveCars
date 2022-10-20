@@ -69,7 +69,7 @@ public class MuskController {
     }
 
     @PostMapping("/postPage3Data")
-    public String customerInfo (@RequestParam String fName, @RequestParam String lName, @RequestParam String address, @RequestParam Integer pnr, @RequestParam String email, @RequestParam String pNumber, @RequestParam String zCode, @RequestParam String cCity, HttpServletResponse response, HttpSession session) throws IOException {
+    public String customerInfo (@RequestParam String fName, @RequestParam String lName, @RequestParam String address, @RequestParam Long pnr, @RequestParam String email, @RequestParam String pNumber, @RequestParam String zCode, @RequestParam String cCity, HttpServletResponse response, HttpSession session) throws IOException {
 
         Customer nyaKunden = new Customer(fName,lName, address,pnr,email, pNumber, zCode, cCity);
         customerRepo.save(nyaKunden);

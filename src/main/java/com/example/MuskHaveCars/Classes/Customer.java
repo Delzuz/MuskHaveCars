@@ -13,7 +13,7 @@ public class Customer {
     private String firstName;
     private String lastName;
     private String address;
-    private Integer PNR;
+    private Long PNR;
     private String email;
     private String phoneNumber;
 
@@ -28,7 +28,7 @@ public class Customer {
 
     }
 
-    public Customer( String firstName, String lastName, String address, Integer PNR, String email, String phoneNumber, String zipCode, String customerCity) {
+    public Customer( String firstName, String lastName, String address, Long PNR, String email, String phoneNumber, String zipCode, String customerCity) {
         /*this.id = id;*/
         this.firstName = firstName;
         this.lastName = lastName;
@@ -72,11 +72,11 @@ public class Customer {
         this.address = address;
     }
 
-    public Integer getPNR() {
+    public Long getPNR() {
         return PNR;
     }
 
-    public void setPNR(Integer PNR) {
+    public void setPNR(Long PNR) {
         this.PNR = PNR;
     }
 

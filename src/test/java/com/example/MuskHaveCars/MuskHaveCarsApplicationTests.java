@@ -43,7 +43,7 @@ class MuskHaveCarsApplicationTests {
 	}
 	@Test
 	public void createCustomerAndTryGetters() {
-		Customer customer = new Customer("john", "johnson", "bluestreet", 202020,
+		Customer customer = new Customer("john", "johnson", "bluestreet", 202020L,
 				"john@gmail.com", "076", "21570", "malmo");
 		Assertions.assertEquals("john", customer.getFirstName());
 		Assertions.assertEquals("bluestreet", customer.getAddress());
