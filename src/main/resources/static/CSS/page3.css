@@ -112,3 +112,19 @@ html,body {
 a:link {
     text-decoration: none;
 }
+
+.wrong {
+    border: solid rgb(255, 16, 16);
+    border-radius: 5px;
+}
+.hide {
+    display: none;
+}
+
+.correct {
+    border: solid rgb(34, 238, 34);
+    border-radius: 5px;
+}
+.color{
+    color: red;
+}
